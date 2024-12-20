@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个视频示例</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="home-page">
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <nav>
+                <!-- 使用 Font Awesome 图标 -->
+                <a href="index.html"><i class="fas fa-home"></i> </a>
+                <a href="shipin.html"><i class="fas fa-video"></i> </a>
+                <a href="gallery.html"><i class="fas fa-image"></i> </a>
+            </nav>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <header>
+                <h1>多个视频示例</h1>
+            </header>
+
+            <main>
+                <div class="video-gallery">
+                    <!-- 视频 1 -->
+                    <video controls poster="img/video1-poster.jpg">
+                        <source src="img/2.mp4" type="video/mp4">
+                        您的浏览器不支持HTML5视频标签。
+                    </video>
+
+                    <!-- 视频 2 -->
+                    <video controls poster="img/video2-poster.jpg">
+                        <source src="img/1.mp4" type="video/mp4">
+                        您的浏览器不支持HTML5视频标签。
+                    </video>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
