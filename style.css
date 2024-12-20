@@ -1,0 +1,113 @@
+/* 设置全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 备用背景颜色，如果图片加载失败时显示 */
+    display: flex;
+    flex-direction: row;
+}
+
+/* 设置主页布局，侧边栏和内容部分 */
+.home-page {
+    display: flex;
+    height: 100vh;
+    background-image: url(./img/背景.jpg); /* 设置背景图片 */
+    background-size: cover; /* 使背景图片覆盖整个元素 */
+    background-position: center; /* 使背景图片居中 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-attachment: fixed; /* 背景图片固定，滚动时不移动 */
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 80px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* 侧边栏链接样式 */
+.sidebar a {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* 内容区域 */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+    /* 移除背景颜色，使内容区域背景透明 */
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* 如果背景图较暗，可以设置文字颜色为白色以提高可读性 */
+}
+
+/* 设置导航栏链接样式 */
+nav a {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* 悬停时更暗的半透明黑色背景 */
+}
+/* 视频和图片页面的布局 */
+.video-gallery, .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-gallery video, .photo-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-gallery video:hover, .photo-gallery img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .video-gallery video, .photo-gallery img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        width: 60px;
+    }
+}
